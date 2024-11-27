@@ -4,47 +4,68 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Perfil do Usuário</title>
+  <title>Cadastro de Clientes</title>
   <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
   <header>
-    <h1>Perfil do Usuário</h1>
+    <h1>Cadastro de Clientes</h1>
   </header>
 
   <nav>
     <a href="index.html">Início</a>
-    <a href="about.html">Sobre</a>
-    <a href="products.html">Produtos</a>
-    <a href="cart.html">Carrinho</a>
-    <a href="profile.html">Perfil</a>
-    <a href="contact.html">Contato</a>
-    <a href="search.html">Buscar</a>
+    <a href="pages/about.html">Sobre</a>
+    <a href="pages/products.html">Produtos</a>
+    <a href="pages/cart.html">Carrinho</a>
+    <a href="pages/profile.html">Perfil</a>
+    <a href="pages/contact.html">Contato</a>
+    <a href="pages/search.html">Buscar</a>
   </nav>
+  
 
   <main>
-    <h2>Seus Dados</h2>
-    <section>
-      <h3>Informações Pessoais</h3>
-      <form action="#">
-        <label for="name">Nome</label>
-        <input type="text" id="name" name="name" value="João da Silva" required>
+    <h2>Complete seu cadastro</h2>
+    <form id="client-form" action="#" method="post">
+      <!-- Nome completo -->
+      <div class="form-group">
+        <label for="full-name">Nome Completo:</label>
+        <input type="text" id="full-name" name="full-name" placeholder="Digite seu nome completo" required>
+      </div>
 
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" value="joao@email.com" required>
+      <!-- E-mail -->
+      <div class="form-group">
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+      </div>
 
-        <label for="phone">Telefone</label>
-        <input type="tel" id="phone" name="phone" value="(11) 99999-9999" required>
+      <!-- Telefone -->
+      <div class="form-group">
+        <label for="phone">Telefone:</label>
+        <input type="tel" id="phone" name="phone" placeholder="(XX) XXXX-XXXX" required>
+      </div>
 
-        <button type="submit">Atualizar Dados</button>
-      </form>
+      <!-- Endereço (opcional) -->
+      <div class="form-group">
+        <label for="address">Endereço (opcional):</label>
+        <textarea id="address" name="address" rows="4" placeholder="Digite seu endereço completo"></textarea>
+      </div>
+
+      <!-- Botões de ação -->
+      <div class="form-actions">
+        <button type="submit" class="btn-primary">Cadastrar</button>
+        <button type="reset" class="btn-secondary">Limpar</button>
+      </div>
+    </form>
+
+    <!-- Área para editar informações -->
+    <section id="edit-profile">
+      <h3>Editar Informações</h3>
+      <p>Para alterar suas informações pessoais, <a href="edit-profile.html">clique aqui</a>.</p>
     </section>
   </main>
 
   <footer>
     <p>&copy; 2024 Minha Plataforma de Produtos. Todos os direitos reservados.</p>
   </footer>
-
-  <script src="../js/scripts.js"></script>
 </body>
 </html>
